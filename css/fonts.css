@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Geologica";
+    src: url(../fonts/Geologica-Light.ttf) format(opentype); 
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Geologica";
+    src: url(../fonts/Geologica-Regular.ttf) format(opentype); 
+    font-style: normal;
+    font-weight: 300;
+}
