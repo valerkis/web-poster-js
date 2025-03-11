@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popup");
-    const openModalBtn = document.getElementById("openBtn");
-    const closePopup = document.getElementById("closePopup");
+    let button = document.getElementById("openBtn");
+    let popup = document.getElementById("popup");
+  
+    if (button && popup) {
+      button.addEventListener("click", function (event) {
+        popup.style.display = "block";
+        event.stopPropagation();
+      });
+  
+      document.addEventListener("click", function (event) {
+        if (!popup.contains(event.target) && event.target !== button) {
+          popup.style.display = "none";
+        }
+      });
+    } 
 
-    openModalBtn.addEventListener("click", function () {
-      popup.style.display = "block";
-    });
-
-    closePopup.addEventListener("click", function () {
-      popup.style.display = "none";
-    });
-
-    window.addEventListener("click", function (event) {
-      if (event.target !== popup && event.target !== openBtn && !popup.contains(event.target)) {
-        popup.style.display = "none";
-      }
-    });
   });

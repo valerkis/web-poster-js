@@ -27,36 +27,27 @@ body{
     width: 2.34vw;
     height: 2.5vw; 
     position: fixed;
-    margin-top: 1.9vw;
-    margin-right: 3vw;
+    margin-top: -1.4vw;
+    margin-left: 94.7vw;
+    background-color: transparent;
     border: none;
     background-image: url("../img/popupBtn-1.svg");
     background-size: cover; 
-    background-color: transparent;
     cursor: pointer;
   }
 
-  /* Поп-ап */
-  .popup {
+  .popup{
     display: none;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 200px;
+    top: 4.7vw;
+    right: 3vw;
+    width: 20.59vw;
+    font-family: "Geologica";
+    font-size: 1.45vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: -0.12vw;
+    line-height: 121%;
     background-color: transparent;
-    padding: 15px;
     border: none;
-  }
-
-  /* Кнопка закрытия */
-  .popup .close {
-    float: right;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #888;
-  }
-
-  .popup .close:hover {
-    color: black;
   }
