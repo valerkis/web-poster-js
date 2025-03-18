@@ -9,14 +9,125 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
-    <section class="sec1">
-        <p class="header">эмоциональная координата</p>
-        <button id="openBtn"></button>
-        <div id="popup" class="popup">
+    <section id="sec1" class="section">
+        <div id="emotionWheel"></div>
+        <p id="header1" class="header">эмоциональная координата</p>
+        <button id="openBtn1" class="openBtn"></button>
+        <div id="popup1" class="popup">
           <p>найди на карте эмоций
             свое чувство в этот момент
             и зафиксируй его по клику</p>
         </div>
+        <canvas id="canvas"></canvas>
+        <div id="info"></div>
+        <div id="infopic"></div>
+        <!-- <div id="reset"></div> -->
+         <div id="back1" class="back"></div>
+         <div id="forward1" class="forward"></div>
+    </section>
+
+    <section id="sec2" class="section">
+        <p id="header2" class="header">почему я это чувствую?</p>
+        <button id="openBtn2" class="openBtn"></button>
+        <div id="popup2" class="popup">
+          <p>наведи курсор на фразу<pre>и узнай причину</pre></p>
+        </div>
+        <div id="spotlight"></div>
+        <div id="problem1" class="problem">
+            <span class="default">тревожно из-за того, как быстро летит время</span>
+            <span class="hover">боюсь не успеть достичь всех целей</span>
+        </div>
+        <div id="problem2" class="problem">
+            <span class="default">завидую успехам окружающих</span>
+            <span class="hover">хочу достичь большего</span>
+        </div>
+        <div id="problem3" class="problem">
+            <span class="default">грустно из-за одиночества</span>
+            <span class="hover">хочу быть значимым для других</span>
+        </div>
+        <div id="problem4" class="problem">
+            <span class="default">злюсь из-за критики</span>
+            <span class="hover">боюсь ошибаться</span>
+        </div>
+        <div id="problem5" class="problem">
+            <span class="default">часто обижаюсь на близких</span>
+            <span class="hover">не отпустил старые обиды </span>
+        </div>
+        <div id="problem6" class="problem">
+            <span class="default">боюсь неопределённости</span>
+            <span class="hover">держусь в зоне комфорта </span>
+        </div>
+        <div id="back2" class="back"></div>
+        <div id="forward2" class="forward"></div>
+    </section>
+
+    <section id="sec3" class="section active">
+        <p id="header3" class="header">плейлист для тебя</p>
+        <div id="back3" class="back"></div>
+        <div id="forward3" class="forward"></div>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/track1.mp3">
+                        <p id="anger1" class="title">1.&nbsp;&nbsp;&nbsp;BREAK STUFF</p>
+                        <p class="artist">LIMP BIZKIT</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="anger2" class="title">2.&nbsp;&nbsp;&nbsp;VIOLENCE</p>
+                        <p class="artist">DOPE</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="anger3" class="title">3.&nbsp;&nbsp;&nbsp;ТАНЕЦ РЫЦАРЕЙ</p>
+                        <p class="artist">ПРОКОФЬЕВ</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="anger4" class="title">4.&nbsp;&nbsp;&nbsp;UNA MATTINA</p>
+                        <p class="artist">LUDOVICO EINAUDI</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="anger5" class="title">5.&nbsp;&nbsp;&nbsp;EMIOL</p>
+                        <p class="artist">UNDER THE CITY</p>
+                    </li>                </ol>
+            </div>
+        
+            <!-- Пластинка -->
+            <div id="player">
+                <div id="vinylWrapper">
+                    <svg id="vinyl" viewBox="0 0 100 100">
+                        <!-- Здесь будет SVG пластинка -->
+                    </svg>
+                </div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">BREAK STUFF</p>
+                    <p id="currentArtist">LIMP BIZKIT</p>
+                </div>
+        
+                <div id="progressBar">
+                    <span id="currentTime">0:00</span>
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                    <span id="totalTime">3:20</span>
+                </div>
+        
+                <!-- Контролы -->
+                <div id="controls">
+                    <button id="prevTrack"></button>
+                    <button id="playBtn" class="active"></button>
+                    <button id="pauseBtn"></button>
+                    <button id="nextTrack"></button>
+                </div>
+            </div>
+        
+            <!-- Переключатели эмоций -->
+            <div id="emotionSelectors">
+                <button class="emotionBtn" data-emotion="anger"></button>
+                <button class="emotionBtn" data-emotion="joy"></button>
+                <button class="emotionBtn" data-emotion="sadness"></button>
+                <button class="emotionBtn" data-emotion="fear"></button>
+                <button class="emotionBtn" data-emotion="love"></button>
+                <button class="emotionBtn" data-emotion="admiration"></button>
+                <button class="emotionBtn" data-emotion="passivity"></button>
+                <button class="emotionBtn" data-emotion="activity"></button>
+            </div>
     </section>
 </body>
 </html>
