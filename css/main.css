@@ -53,6 +53,14 @@ body{
   padding-left: 3vw;
 }
 
+.emotion-section {
+  display: none;
+}
+
+.emotion-section.active {
+  display: block;
+}
+
 .openBtn{
   position: absolute;
   border: none;
@@ -277,8 +285,9 @@ body{
 }
 
 #sec3{
-  /* background-color: #212121; */
-  background-image: url("../img/экран3.svg");
+  background-color: #212121;
+  /* background-image: url("../img/экран3.svg"); */
+  cursor: url("../img/cursor-sec2.svg"), auto;
   background-size: contain;
 }
 
@@ -296,13 +305,46 @@ body{
   cursor: url("../img/cursor-sec2.svg"), auto;
 }
 
-@keyframes spin {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-  }
+.vinylWrapper{
+  position: absolute;
+  width: 29.38vw;
+  height: 29.38vw;
+  top: 2.89vw;
+  left: 35.16vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#vAnger{
+  background-image: url("../img/angervynil.svg");
+}
+
+#vSad{
+  background-image: url("../img/sadvynil.svg");
+}
+
+#vFear{
+  background-image: url("../img/fearvynil.svg");
+}
+
+#vPassive{
+  background-image: url("../img/passivevynil.svg");
+}
+
+#vLove{
+  background-image: url("../img/lovevynil.svg");
+}
+
+#vJoy{
+  background-image: url("../img/joyvynil.svg");
+}
+
+#vDesire{
+  background-image: url("../img/desirevynil.svg");
+}
+
+#vActivity{
+  background-image: url("../img/activevynil.svg");
 }
 
 #playlist{
@@ -323,6 +365,7 @@ body{
 }
 
 .title{
+  width: 30vw;
   font-family: "Geologica";
   font-size: 1.45vw;
   font-weight: 100;
@@ -331,6 +374,7 @@ body{
 }
 
 .artist{
+  width: 30vw;
   position: absolute;
   font-family: "Geologica";
   font-size: 1vw;
@@ -338,7 +382,7 @@ body{
   text-transform: uppercase;
   letter-spacing: -0.085vw;
   color: white;
-  left: 1.6vw;
+  left: 1.9vw;
 }
 
 .track{
@@ -365,10 +409,83 @@ body{
   color: white;
 }
 
-#vinyl{
-  width: 200px;
-  height: 200px;
+#sad1{
+  color: #7C7BC8;
 }
+
+#sad2{
+  color: #8E8DC7;
+}
+
+#sad3{
+  color: #AEAEC9;
+}
+
+#sad4{
+  color: #C1C0D5;
+}
+
+#sad5{
+  color: white;
+}
+
+#fear1{
+  color: #909747;
+}
+
+#fear2{
+  color: #9CA162;
+}
+
+#fear3{
+  color: #BDBFA1;
+}
+
+#fear4{
+  color: #B7B999;
+}
+
+#fear5{
+  color: white;
+}
+
+#passivity1{
+  color: #A9A9A9;
+}
+
+#passivity2{
+  color: #c5c5c5;
+}
+
+#passivity3{
+  color: #e4e4e4;
+}
+
+#passivity4{
+  color: #f0f0f0;
+}
+
+#passivity5{
+  color: white;
+}
+
+#love1{
+  color: #FF427A;
+}
+
+#joy{
+  color: #FF5C00;
+}
+
+#desire{
+  color: #9AF2F2;
+}
+
+#activity{
+  color: #FFC556;
+}
+
+
 
 #trackInfo{
   position: absolute;
@@ -382,12 +499,14 @@ body{
 }
 
 #currentTitle{
+  width: 50vw;
   font-size: 1.91vw;
-  font-weight: 100;
+  font-weight: 300;
   color: white;
 }
 
 #currentArtist{
+  width: 50vw;
   font-size: 1.45vw;
   font-weight: 300;
   color: white;
@@ -427,24 +546,212 @@ body{
   background-color: transparent;
   border: none;
   background-size: cover; 
-}
+} 
 
-#playBtn{
+#playBtn {
   width: 3.55vw;
   background-image: url("../img/play.svg");
 }
 
-#pauseBtn{
+#pauseBtn {
   width: 2.73vw;
   background-image: url("../img/pause.svg");
-  display: none; /* Изначально скрыта */
 }
 
-.active {
-  display: block !important;
+.hidden{
+  display: none;
 }
 
-.hidden {
-  display: none !important;
+.play{
+  width: 3.55vw;
+  background-image: url("../img/play.svg");
+} 
+
+.pause{
+  width: 2.73vw;
+  background-image: url("../img/pause.svg");
+} 
+
+.emotion-section{
+  position: absolute;
+  width: 80vw;
+  height: 10vw;
 }
 
+#emotionHeader{
+  left: 14vw;
+  color: white;
+}
+
+.emotionBtn{
+  width: 2vw;
+  height: 2vw;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#emotionSelectors{
+  position: absolute;
+  right: 3vw;
+  top: 1.9vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+}
+
+.emotionBtn{
+  cursor: url("../img/cursor-sec2.svg"), auto;;
+}
+
+.emotionBtn[data-emotion="activity"] {
+  background-color: #FFC556;
+}
+
+.emotionBtn[data-emotion="admiration"] {
+  background-color: #9FFFFF;
+}
+
+.emotionBtn[data-emotion="joy"] {
+  background-color: #FF5C00;
+}
+
+.emotionBtn[data-emotion="love"] {
+  background-color: #FF427A;
+}
+
+.emotionBtn[data-emotion="passivity"] {
+  background-color: #A9A9A9;
+}
+
+.emotionBtn[data-emotion="sadness"] {
+  background-color: #7C7BC8;
+}
+
+.emotionBtn[data-emotion="fear"] {
+  background-color: #909747;
+}
+
+.emotionBtn[data-emotion="anger"] {
+  background-color: #FF3E3E;
+}
+
+#progressBar{
+  position: absolute;
+  top: 38.1vw;
+  left: 33.59vw;
+}
+
+#seekBar {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.16vw;
+  width: 32.85vw;
+  background: white; 
+  border-radius: 5vw; 
+  outline: none; 
+  cursor: url("../img/cursor-sec2.svg"), auto;
+}
+
+#seekBar::-moz-range-track {
+  background: white;
+  height: 1vw;
+  border-radius: 5vw;
+}
+
+#seekBar::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2vw;
+  height: 2vw;
+  background: white;
+  border-radius: 50%; 
+  cursor: url("../img/cursor-sec2.svg"), auto;
+}
+
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.63vw;
+  height: 0.63vw;
+  background: white;
+  border-radius: 50%;
+  cursor: url("../img/cursor-sec2.svg"), auto;
+}
+.playTime{
+  position: absolute;
+  top: 40.23vw;
+  left: 33.59vw;
+  font-family: "Geologica";
+  font-size: 1.09vw;
+  font-weight: 300;
+  color: white;
+  letter-spacing: -0.085vw;
+  width: 32.85vw;
+  justify-content: space-between;
+  display: flex;
+}
+
+#currentTime{
+  position: relative;
+}
+
+#totalTime{
+  position: relative;
+}
+
+.emotionSection {
+  display: none;
+}
+
+.emotionSection.active {
+  display: block;
+}
+
+.backHalo{
+  position: absolute;
+  width: 85vw;
+  height: 85vw;
+  top: 35vw;
+  left: 4vw;
+  border-radius: 50%;
+  filter: blur(50vw);
+}
+
+#activityHalo{
+  background: #FFC556;
+}
+
+#desireHalo{
+  background: #9AF2F2;
+}
+
+#joyHalo{
+  background: #FF5C00;
+}
+
+#loveHalo{
+  background: #FF427A;
+}
+
+#fearHalo{
+  background: #909747;
+}
+
+#passiveHalo{
+  background: #A9A9A9;
+}
+
+#fearHalo{
+  background: #909747;
+}
+
+#sadHalo{
+  background: #7C7BC8;
+}
+
+#angerHalo{
+  background: #DD1E1E;
+}

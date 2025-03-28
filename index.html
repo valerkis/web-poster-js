@@ -21,7 +21,6 @@
         <canvas id="canvas"></canvas>
         <div id="info"></div>
         <div id="infopic"></div>
-        <!-- <div id="reset"></div> -->
          <div id="back1" class="back"></div>
          <div id="forward1" class="forward"></div>
     </section>
@@ -63,11 +62,366 @@
 
     <section id="sec3" class="section active">
         <p id="header3" class="header">плейлист для тебя</p>
-        <div id="back3" class="back"></div>
-        <div id="forward3" class="forward"></div>
+
+
+    <div id="emotionSectionsContainer">
+        <section id="activity" class="emotionSection active">
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;активность</p>
+             <div id="activityHalo" class="backHalo"></div>
             <div id="playlist">
                 <ol id="trackList">
-                    <li id="track1" class="track" data-src="tracks/track1.mp3">
+                    <li id="track1" class="track" data-src="tracks/joytrack1.mp3">
+                        <p id="activity" class="title">1.&nbsp;&nbsp;&nbsp;THE LOST SOUL DOWN</p>
+                        <p class="artist">NBSPLV</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/joytrack2.mp3">
+                        <p id="activity" class="title">2.&nbsp;&nbsp;&nbsp;BEAUTIFUL PEOPLE</p>
+                        <p class="artist">DAVID GUETTA, SIA</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/joytrack3.mp3">
+                        <p id="activity" class="title">3.&nbsp;&nbsp;&nbsp;OCEAN DRIVE</p>
+                        <p class="artist">DUKE DUMONT</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/joytrack4.mp3">
+                        <p id="activity" class="title">4.&nbsp;&nbsp;&nbsp;MONTREAL</p>
+                        <p class="artist">ROOSEVELT</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/joytrack5.mp3">
+                        <p id="activity" class="title">5.&nbsp;&nbsp;&nbsp;CAN'T STOP YOUR LOVING</p>
+                        <p class="artist">POOLSIDE</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vActivity"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle"></p>
+                    <p id="currentArtist"></p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">0:00</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div> 
+        </section>
+        <section id="admiration" class="emotionSection">
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;восхищение</p>
+            <div id="desireHalo" class="backHalo"></div>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
+                        <p id="desire" class="title">1.&nbsp;&nbsp;&nbsp;CALIFORNIAN SOIL</p>
+                        <p class="artist">LONDON GRAMMAR</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="desire" class="title">2.&nbsp;&nbsp;&nbsp;WILDEST DREAMS</p>
+                        <p class="artist">TAYLOR SWIFT</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="desire" class="title">3.&nbsp;&nbsp;&nbsp;THE EMOTIONS</p>
+                        <p class="artist">BORNS</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="desire" class="title">4.&nbsp;&nbsp;&nbsp;1965</p>
+                        <p class="artist">ZELLA DAY</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="desire" class="title">5.&nbsp;&nbsp;&nbsp;CLOCKS</p>
+                        <p class="artist">COLDOLAY</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vDesire"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">CALIFORNIAN SOIL</p>
+                    <p id="currentArtist">LONDON GRAMMAR</p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">3:18</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div> 
+        </section>
+        <section id="joy" class="emotionSection">
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;радость</p>
+            <div id="joyHalo" class="backHalo"></div>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
+                        <p id="joy" class="title">1.&nbsp;&nbsp;&nbsp;ROMAN HOLIDAY</p>
+                        <p class="artist">HALSEY</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="joy" class="title">2.&nbsp;&nbsp;&nbsp;CLOSER</p>
+                        <p class="artist">INOUE JOE</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="joy" class="title">3.&nbsp;&nbsp;&nbsp;WHO WE ARE</p>
+                        <p class="artist">C2C</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="joy" class="title">4.&nbsp;&nbsp;&nbsp;ME PASE</p>
+                        <p class="artist">FARRUKO</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="joy" class="title">5.&nbsp;&nbsp;&nbsp;IT'S A BEAUTIFUL DAY</p>
+                        <p class="artist">TIM McMORRIS</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vJoy"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">ROMAN HOLIDAY</p>
+                    <p id="currentArtist">HALSEY</p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">2:56</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div>
+        </section>
+        <section id="love" class="emotionSection">
+        <p id="emotionHeader" class="header">:&nbsp;&nbsp;любовь</p>
+            <div id="loveHalo" class="backHalo"></div>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
+                        <p id="love1" class="title">1.&nbsp;&nbsp;&nbsp;THINKING OUT LOUD</p>
+                        <p class="artist">ED SHEERAN</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="love1" class="title">2.&nbsp;&nbsp;&nbsp;SHALLOW</p>
+                        <p class="artist">LADY GAGA, BRADLEY COOPER</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="love1" class="title">3.&nbsp;&nbsp;&nbsp;CITY OF STARS</p>
+                        <p class="artist">RYAN GOSLING, EMMA STONE</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="love1" class="title">4.&nbsp;&nbsp;&nbsp;BLINDING LIGHTS</p>
+                        <p class="artist">THE WEEKEND</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="love1" class="title">5.&nbsp;&nbsp;&nbsp;ATTENTION</p>
+                        <p class="artist">CHARLIE PUTH</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vLove"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">THINKING OUT LOUD</p>
+                    <p id="currentArtist">ED SHEERAN</p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">3:40</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div>
+        </section>
+        <section id="passivity" class="emotionSection">
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;меланхолия</p>
+            <div id="passiveHalo" class="backHalo"></div>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
+                        <p id="passivity1" class="title">1.&nbsp;&nbsp;&nbsp;I'M TIRED OF MYSELF</p>
+                        <p class="artist">FLWSH DXSTROYED</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="passivity2" class="title">2.&nbsp;&nbsp;&nbsp;MOON</p>
+                        <p class="artist">FOALS</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="passivity3" class="title">3.&nbsp;&nbsp;&nbsp;ON THE ESPLANADE</p>
+                        <p class="artist">JULIAN PLENTI</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="passivity4" class="title">4.&nbsp;&nbsp;&nbsp;DON'T LET THEM</p>
+                        <p class="artist">GEMMA HAYES</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="passivity5" class="title">5.&nbsp;&nbsp;&nbsp;ALL IN FORMS</p>
+                        <p class="artist">BONOBO</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vPassive"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">I'M TIRED OF MYSELF</p>
+                    <p id="currentArtist">FLWSH DXSTROYED</p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">3:20</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div>
+        </section>
+        <section id="fear" class="emotionSection">
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;страх</p>
+            <div id="fearHalo" class="backHalo"></div>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
+                        <p id="fear1" class="title">1.&nbsp;&nbsp;&nbsp;THE SHINING MAN TITLE</p>
+                        <p class="artist">CHUCK CIRINO</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="fear2" class="title">2.&nbsp;&nbsp;&nbsp;VOLK</p>
+                        <p class="artist">THOM YORKE</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="fear3" class="title">3.&nbsp;&nbsp;&nbsp;SUSPITIA</p>
+                        <p class="artist">GOBLIN</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="fear4" class="title">4.&nbsp;&nbsp;&nbsp;BREATHE</p>
+                        <p class="artist">KILLOREZ</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="fear5" class="title">5.&nbsp;&nbsp;&nbsp;NIGHTCALL</p>
+                        <p class="artist">KAVINSKY</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vFear"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">THE SHINING MAN TITLE</p>
+                    <p id="currentArtist">CHUCK CIRINO</p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">3:13</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div>
+        </section>
+        <section id="sadness" class="emotionSection">
+            <div id="sadHalo" class="backHalo"></div>
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;печаль</p>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
+                        <p id="sad1" class="title">1.&nbsp;&nbsp;&nbsp;VACANT</p>
+                        <p class="artist">DREAM THEATER</p>
+                    </li>
+                    <li id="track2" class="track" data-src="tracks/track2.mp3">
+                        <p id="sad2" class="title">2.&nbsp;&nbsp;&nbsp;LIABILITY</p>
+                        <p class="artist">LORDE</p>
+                    </li>
+                    <li id="track3" class="track" data-src="tracks/track3.mp3">
+                        <p id="sad3" class="title">3.&nbsp;&nbsp;&nbsp;SWEET DREAM</p>
+                        <p class="artist">KILLOREZ, YUNG VRO</p>
+                    </li>
+                    <li id="track4" class="track" data-src="tracks/track4.mp3">
+                        <p id="sad4" class="title">4.&nbsp;&nbsp;&nbsp;SOMETHING ABOUT</p>
+                        <p class="artist">NECTRY, ANTENT</p>
+                    </li>
+                    <li id="track5" class="track" data-src="tracks/track5.mp3">
+                        <p id="sad5" class="title">5.&nbsp;&nbsp;&nbsp;A LOOK INTO THE PAST</p>
+                        <p class="artist">INALERYY</p>
+            </div>
+        
+            <div id="player">
+                <div class="vinylWrapper" id="vSad"></div>
+        
+                <div id="trackInfo">
+                    <p id="currentTitle">VACANT</p>
+                    <p id="currentArtist">DREAM THEATER</p>
+                </div>
+        
+                <div id="progressBar">
+                    <input type="range" id="seekBar" min="0" max="100" value="0">
+                </div>
+        
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">2:51</span>
+                </div>
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
+                </div>
+            </div>
+        </section>
+        <section id="anger" class="emotionSection">
+            <div id="angerHalo" class="backHalo"></div>
+            <p id="emotionHeader" class="header">:&nbsp;&nbsp;гнев</p>
+            <div id="playlist">
+                <ol id="trackList">
+                    <li id="track1" class="track" data-src="tracks/angertrack1.mp3">
                         <p id="anger1" class="title">1.&nbsp;&nbsp;&nbsp;BREAK STUFF</p>
                         <p class="artist">LIMP BIZKIT</p>
                     </li>
@@ -89,13 +443,8 @@
                     </li>                </ol>
             </div>
         
-            <!-- Пластинка -->
             <div id="player">
-                <div id="vinylWrapper">
-                    <svg id="vinyl" viewBox="0 0 100 100">
-                        <!-- Здесь будет SVG пластинка -->
-                    </svg>
-                </div>
+                <div class="vinylWrapper" id="vAnger"></div>
         
                 <div id="trackInfo">
                     <p id="currentTitle">BREAK STUFF</p>
@@ -103,31 +452,48 @@
                 </div>
         
                 <div id="progressBar">
-                    <span id="currentTime">0:00</span>
                     <input type="range" id="seekBar" min="0" max="100" value="0">
-                    <span id="totalTime">3:20</span>
                 </div>
         
-                <!-- Контролы -->
-                <div id="controls">
+                <div class="playTime">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">2:51</span>
+                </div>
+        
+                <!-- <div id="controls">
                     <button id="prevTrack"></button>
-                    <button id="playBtn" class="active"></button>
+                    <button id="playBtn"></button>
                     <button id="pauseBtn"></button>
                     <button id="nextTrack"></button>
+                </div> -->
+
+                <div id="controls">
+                    <button id="prevTrack" class="control-btn"></button>
+                    <button id="playBtn" class="control-btn"></button>
+                    <button id="pauseBtn" class="control-btn hidden"></button>
+                    <button id="nextTrack" class="control-btn"></button>
                 </div>
             </div>
-        
-            <!-- Переключатели эмоций -->
-            <div id="emotionSelectors">
-                <button class="emotionBtn" data-emotion="anger"></button>
-                <button class="emotionBtn" data-emotion="joy"></button>
-                <button class="emotionBtn" data-emotion="sadness"></button>
-                <button class="emotionBtn" data-emotion="fear"></button>
-                <button class="emotionBtn" data-emotion="love"></button>
-                <button class="emotionBtn" data-emotion="admiration"></button>
-                <button class="emotionBtn" data-emotion="passivity"></button>
-                <button class="emotionBtn" data-emotion="activity"></button>
-            </div>
+
+        </section>
+    </div>
+
+    <div id="emotionSelectors">
+        <button class="emotionBtn" data-emotion="activity"></button>
+        <button class="emotionBtn" data-emotion="admiration"></button>
+        <button class="emotionBtn" data-emotion="joy"></button>
+        <button class="emotionBtn" data-emotion="love"></button>
+        <button class="emotionBtn" data-emotion="passivity"></button>
+        <button class="emotionBtn" data-emotion="fear"></button>
+        <button class="emotionBtn" data-emotion="sadness"></button>
+        <button class="emotionBtn" data-emotion="anger"></button>
+
+    </div>
+</section>
+<div id="back3" class="back"></div>
+<div id="forward3" class="forward"></div>
     </section>
+
+
 </body>
 </html>
